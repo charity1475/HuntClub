@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/room/reservation/v1")
+@RequestMapping(ResourceConstants.ROOM_RESERVATION_V1)
 public class ReservationResource {
     @RequestMapping(path = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<ReservationResponse> getAvailableRooms(
@@ -23,7 +23,7 @@ public class ReservationResource {
             @RequestParam(value = "checkout")
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
             LocalDate checkout) {
-        
+
                 return  new ResponseEntity<>(new ReservationResponse(), HttpStatus.OK);
     }
 }
