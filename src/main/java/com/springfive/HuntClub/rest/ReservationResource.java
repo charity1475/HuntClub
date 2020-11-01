@@ -23,7 +23,7 @@ public class ReservationResource {
             @RequestParam(value = "checkout")
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
             LocalDate checkout) {
+        
                 return  new ResponseEntity<>(new ReservationResponse(), HttpStatus.OK);
-
     }
 }
