@@ -1,5 +1,6 @@
 package com.springfive.HuntClub.rest;
 
+import com.springfive.HuntClub.model.request.ReservationRequest;
 import com.springfive.HuntClub.model.response.ReservationResponse;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,7 @@ public class ReservationResource {
     )
     public ResponseEntity<ReservationResponse> createReservation(
             @RequestBody
-            ReservationRequest reservationRequest){
+                    ReservationRequest reservationRequest){
             return new ResponseEntity<>(new ReservationResponse(),HttpStatus.CREATED);
     }
 }
