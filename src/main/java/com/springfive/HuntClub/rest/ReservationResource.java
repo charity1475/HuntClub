@@ -41,4 +41,12 @@ public class ReservationResource {
                     ReservationRequest reservationRequest){
         return new ResponseEntity<>(new ReservationResponse(),HttpStatus.OK);
     }
+
+    @RequestMapping(path = "/{reservationId}", method = RequestMethod.DELETE)
+    public ResponseEntity<Void> deleteReservation(
+            @PathVariable()
+            long reservationId){
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+    }
 }
