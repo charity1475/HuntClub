@@ -15,7 +15,7 @@ public class RoomEntity {
     public RoomEntity() {
     }
 
-    public RoomEntity(Integer roomNumber, String price) {
+    public RoomEntity(Integer roomNumber, Integer price) {
         this.roomNumber = roomNumber;
         this.price = price;
     }
@@ -28,6 +28,6 @@ public class RoomEntity {
     private Integer roomNumber;
 
     @NotNull
-    private String price;
+    private Integer price;
 
 }

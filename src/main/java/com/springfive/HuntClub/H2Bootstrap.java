@@ -16,9 +16,9 @@ public class H2Bootstrap implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Bootstrapping data: ");
 
-        roomRepository.save(new RoomEntity(405, "200"));
-        roomRepository.save(new RoomEntity(406, "300"));
-        roomRepository.save(new RoomEntity(407, "180"));
+        roomRepository.save(new RoomEntity(405, 200));
+        roomRepository.save(new RoomEntity(406, 300));
+        roomRepository.save(new RoomEntity(407, 180));
         Iterable<RoomEntity> itr = roomRepository.findAll();
         System.out.println("Printing data: ");
 
