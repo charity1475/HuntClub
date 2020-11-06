@@ -6,19 +6,9 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
 @Entity
 @Table(name = "Room")
-
 public class RoomEntity {
-
-    public RoomEntity() {
-    }
-
-    public RoomEntity(Integer roomNumber, Integer price) {
-        this.roomNumber = roomNumber;
-        this.price = price;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,6 +18,40 @@ public class RoomEntity {
     private Integer roomNumber;
 
     @NotNull
-    private Integer price;
+    private String price;
+
+    public RoomEntity() {
+        super();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public RoomEntity(Integer roomNumber, String price) {
+        super();
+        this.roomNumber = roomNumber;
+        this.price = price;
+    }
+
+    public Integer getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(Integer roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
 }

@@ -1,6 +1,6 @@
 package com.springfive.HuntClub.config;
 
-import com.springfive.HuntClub.convertor.RoomEntityToReservationResponseConvertor;
+import com.springfive.HuntClub.convertor.RoomEntityToReservableRoomResponseConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ConversionServiceFactoryBean;
@@ -11,17 +11,19 @@ import java.util.Set;
 
 @Configuration
 public class ConversionConfig {
-    private Set<Converter> getConverters(){
+    private Set<Converter> getConverters() {
         Set<Converter> converters = new HashSet<Converter>();
-        converters.add((Converter) new RoomEntityToReservationResponseConvertor());
+        converters.add((Converter) new RoomEntityToReservableRoomResponseConverter());
+
         return converters;
     }
 
     @Bean
-    public ConversionService conversionService(){
+    public ConversionService conversionService() {
         ConversionServiceFactoryBean bean = new ConversionServiceFactoryBean();
         bean.setConverters(getConverters());
         bean.afterPropertiesSet();
+
         return bean.getObject();
     }
 }

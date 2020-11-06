@@ -4,14 +4,22 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDate;
 
-@Data
 public class ReservationRequest {
-    private Long id;
 
+    private Long id;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate checkin;
-
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate checkout;
 
+    public ReservationRequest() {
+        super();
+    }
+
+    public ReservationRequest(Long id, LocalDate checkin, LocalDate checkout) {
+        super();
+        this.id = id;
+        this.checkin = checkin;
+        this.checkout = checkout;
+    }
 }
