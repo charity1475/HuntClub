@@ -17,6 +17,6 @@ public class RoomEntityToReservationResponseConvertor implements Converter<RoomE
         Self self = new Self();
         self.setRef(ResourceConstants.ROOM_RESERVATION_V1 + "/" + roomEntity.getId());
         reservationResponse.setLinks(links);
-        return null;
+        return reservationResponse;
     }
 }
