@@ -29,7 +29,7 @@
     "@angular-devkit/build-angular": "0.1100.4",
     "@angular/cli": "10.2.0",
     "@angular/compiler-cli": "10.2.3",
-    "@types/node": "12.19.8",
+    "@types/node": "12.19.9",
     "@types/jasmine": "3.6.1",
     "@types/jasminewd2": "2.0.8",
     "codelyzer": "6.0.1",
