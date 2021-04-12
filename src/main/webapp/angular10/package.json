@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.1102.0",
-    "@angular/cli": "10.2.2",
+    "@angular/cli": "11.2.8",
     "@angular/compiler-cli": "11.2.0",
     "@types/jasminewd2": "2.0.8",
     "codelyzer": "6.0.1",
